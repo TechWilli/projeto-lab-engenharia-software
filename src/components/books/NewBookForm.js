@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react';
-import { BookContext } from '../contexts/BookContext';
+import { BookContext } from '../../contexts/BookContext';
 
 const NewBookForm = () => {
+
     const { dispatch } = useContext(BookContext);
     const [title, setTitle] = useState('');
     const [author, setAuthor] = useState('');
@@ -16,13 +17,13 @@ const NewBookForm = () => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="título" value={title}
+                <input className="input-form" type="text" placeholder="título" value={title}
                     onChange={(e) => setTitle(e.target.value)} required />
 
-                <input type="text" placeholder="autor" value={author}
+                <input className="input-form" type="text" placeholder="autor" value={author}
                     onChange={(e) => setAuthor(e.target.value)} required />
 
-                <input className="btn btn-primary" type="submit" value="adicionar" style={{ backgroundColor: '#3498DB' }}/>
+                <input className="btn btn-primary" type="submit" value="adicionar" style={{ backgroundColor: '#5498DB' }}/>
             </form>
         </div>
     );
