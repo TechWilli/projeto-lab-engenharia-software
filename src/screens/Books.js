@@ -25,7 +25,7 @@ export default function Books(props) {
                 className="btn btn-warning"
                 type="button"
                 onClick={() => history.push('/')}>
-                voltar
+                home
             </HomeButton>
             <Navbar />
             <BookList />

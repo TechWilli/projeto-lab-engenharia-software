@@ -16,6 +16,7 @@ const BookButton = styled.button`
     border-right: 2px solid orange;
     border-bottom: 2px solid orange;
     margin: 10px;
+    outline: none !important;
 `;
 
 const LoginButton = styled.button`
@@ -24,6 +25,8 @@ const LoginButton = styled.button`
     border-right: 2px solid #002f6c;
     border-bottom: 2px solid #002f6c;
     margin: 10px;
+    outline: none;
+    outline: none !important;
 `;
 
 export default function Home(props) {
