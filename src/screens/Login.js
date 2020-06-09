@@ -25,18 +25,24 @@ export default function Login(props) {
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleUser = event => setUser(event.target.value)
+    const handleUser = event => setUser(event.target.value);
 
     const handlePassword = event => setPassword(event.target.value);
 
     const history = useHistory();
     const sendToRoute = useCallback(() => {
-        history.push('/books');
-    });
+        history.push('/');
+    }, []);
 
     const handleLogin = () => {
         // alert(`user: ${user} password: ${password}`);
-        sendToRoute();
+        if (user === 'admin' && password === 'admin') {
+            sendToRoute();
+
+        } else {
+            alert('Apenas administradores são autorizados no momento :(');
+        }
+
     }
 
     console.log('user:', user);
@@ -92,7 +98,7 @@ export default function Login(props) {
                             type="button"
                             className="btn btn-warning"
                             style={{ width: 250 }}
-                            onClick={() => alert('funcionalidade em breve')}
+                            onClick={() => alert('funcionalidade em em desenvolvimento')}
                         >
                             cadastrar-se
                         </button>

@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './screens/Home';
 import Login from './screens/Login';
-import Books from  './screens/Books';
+import Books from './screens/Books';
+import Students from './screens/Students';
 
 export default function Routes(props) {
 
@@ -13,6 +14,7 @@ export default function Routes(props) {
                 <Route path='/' exact component={Home} />
                 <Route path='/login' component={Login} />
                 <Route path='/books' component={Books} />
+                <Route path='/students' component={Students} />
             </Switch>
         </Router>
     );

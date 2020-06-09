@@ -1,8 +1,5 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import Navbar from '../components/navbar/Navbar';
-import BookList from '../components/books/BookList';
-import NewBookForm from '../components/books/NewBookForm';
 import styled from 'styled-components';
 
 const HomeButton = styled.button`
@@ -15,25 +12,22 @@ const HomeButton = styled.button`
     border-bottom: 2px solid orange;
 `;
 
-const BookFormContainer = styled.div`
-    box-shadow: 4px 4px 8px rgb(0, 0, 0, .5);
-`;
-
-export default function Books(props) {
+export default function Students(props) {
 
     const history = useHistory();
 
     return (
-        <BookFormContainer className="mx-auto" style={{ backgroundColor: '#9fa8da', width: '90%', maxWidth: 700, marginTop: '2.5rem' }}>
+        <div>
             <HomeButton
                 className="btn-lg btn-warning"
                 type="button"
                 onClick={() => history.push('/')}>
                 home
             </HomeButton>
-            <Navbar />
-            <BookList />
-            <NewBookForm />
-        </BookFormContainer>
+
+            <div style={{ margin: 100 }}>
+                <span>Cadastro de novos estudantes (users)</span>
+            </div>
+        </div>
     );
 }

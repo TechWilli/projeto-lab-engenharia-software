@@ -87,17 +87,21 @@ form{
   background: #ffffff;
   color: #000000;
   border: 0;
-  border-radius: 25px;
+  border-radius: 5px;
   outline: none;
 }
 
-input[type='submit']{
+input[type='submit'] {
   margin: 10px auto;
   background: #eee;
   border: 0;
   padding: 6px 20px;
   display: block;
-  border-radius: 10px;
+  border-radius: 0px;
   border-right: 2px solid #01579b;
   border-bottom: 2px solid #01579b;
+}
+
+input[type='submit']:hover {
+  background-color: #01579b !important;
 }
